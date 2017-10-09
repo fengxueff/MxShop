@@ -59,13 +59,17 @@ class OrderGoods(models.Model):
     """
         订单的商品详情
     """
-    order = models.ForeignKey(OrderInfo)
-    goods = models.ForeignKey(Goods)
-    goods_num = models.IntegerField()
-
+    order = models.ForeignKey(OrderInfo,verbose_name="订单信息")
+    goods = models.ForeignKey(Goods,verbose_name="商品")
+    goods_num = models.IntegerField(default=0,verbose_name="商品数量")
 
     create_time = models.DateTimeField(auto_now_add=True, verbose_name="创建时间")
 
+    class Meta:
+        verbose_name = "订单商品"
+        verbose_name_plural = verbose_name
 
+    def __str__(self):
+        return self.order.order_sn
 
 
