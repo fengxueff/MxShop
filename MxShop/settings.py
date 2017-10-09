@@ -42,13 +42,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.users.apps.UsersConfig',
+    'users.apps.UsersConfig',
+    'goods.apps.GoodsConfig',
+    'trade.apps.TradeConfig',
+    'user_operation.apps.UserOperationConfig',
     "DjangoUeditor",
     "xadmin",
-    "goods",
-    "trade",
-    "user_operation",
-    # "users",
+    # "goods",
+    # "trade",
+    # "user_operation",
+    # "users", 说明：users其实就是等同于apps.users.apps.UsersConfig这种方式
 ]
 
 MIDDLEWARE = [
