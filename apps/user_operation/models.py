@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
-from goods.models import Goods
+from apps.goods.models import Goods
 # Create your models here.
 
 User = get_user_model()
